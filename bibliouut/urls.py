@@ -46,5 +46,7 @@ urlpatterns = [
     re_path('api-auth/', include('rest_framework.urls')),
    re_path('apis/livres/rest-auth/', include('rest_auth.urls')),
    re_path('apis/livres/rest-auth/registration/', include('rest_auth.registration.urls')),
+     re_path('apis/categories/rest-auth/', include('rest_auth.urls')),
+   re_path('apis/categories/rest-auth/registration/', include('rest_auth.registration.urls')),
 
 ]
