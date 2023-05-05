@@ -14,4 +14,3 @@ admin.site.register(Theses)
 admin.site.register(Consultes)
 admin.site.register(Telecharge)
 
-

@@ -8,6 +8,7 @@ from .models import Consultes
 from .models import Categories
 from .models import Telecharge
 
+
 class UserSerializer(ModelSerializer): # new
         class Meta:
             model = get_user_model()
@@ -42,4 +43,3 @@ class TelechargeSerializer(ModelSerializer):
     class Meta:
         model =Telecharge
         fields =['dates','thesed']
-
