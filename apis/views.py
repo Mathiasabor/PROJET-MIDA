@@ -24,7 +24,7 @@ from rest_framework.permissions import IsAuthenticated
 class LivreViewset(ModelViewSet):
 
     serializer_class = LivreSerializer
-   # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_queryset(self):
         return Livre.objects.all()
 
@@ -32,7 +32,7 @@ class LivreViewset(ModelViewSet):
 class CategoriesViewset(ModelViewSet):
 
     serializer_class = CategoriesSerializer
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_queryset(self):
         return Categories.objects.all()
 
