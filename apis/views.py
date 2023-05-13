@@ -24,7 +24,7 @@ from rest_framework.permissions import IsAuthenticated
 class LivreViewset(ModelViewSet):
 
     serializer_class = LivreSerializer
-   # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_queryset(self):
         return Livre.objects.all()
 
@@ -32,32 +32,32 @@ class LivreViewset(ModelViewSet):
 class CategoriesViewset(ModelViewSet):
 
     serializer_class = CategoriesSerializer
-   # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_queryset(self):
         return Categories.objects.all()
 
 
 class ConsultesViewset(ModelViewSet):
     serializer_class = ConsultesSerializer
-   # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_queryset(self):
         return Consultes.objects.all()
 
 class ThesesViewset(ModelViewSet):
     serializer_class = ThesesSerializer
-   # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_queryset(self):
         return Theses.objects.all()
 
 class TelechargeViewset(ModelViewSet):
     serializer_class = TelechargeSerializer
-   # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_queryset(self):
         return Telecharge.objects.all()
 
 class UserViewset(ModelViewSet):
     serializer_class = UserSerializer
-   # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_queryset(self):
         return  get_user_model().objects.all()
 
