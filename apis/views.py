@@ -62,4 +62,10 @@ class UserViewset(ModelViewSet):
         return  get_user_model().objects.all()
 
 
-
+class SingleUserViewset(ModelViewSet):
+    serializer_class = UserSerializer
+    #permission_classes = [IsAuthenticated]
+    def get_queryset(self, pk =None):
+        user = self.request.user
+        queryset = User.objects.filter(pk=user.pk)
+        return queryset

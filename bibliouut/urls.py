@@ -25,6 +25,7 @@ from apis.views import ConsultesViewset
 from apis.views import ThesesViewset
 from apis.views import TelechargeViewset
 from apis.views import UserViewset
+from apis.views import SingleUserViewset
 
 from django.urls import re_path
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
@@ -36,6 +37,7 @@ router.register('consultes',ConsultesViewset, basename ='consultes')
 router.register('theses',ThesesViewset, basename ='theses')
 router.register('telecharges',TelechargeViewset, basename ='telecharges')
 router.register('users',UserViewset, basename ='users')
+router.register('singleuser',SingleUserViewset, basename='singleuser')
 
 urlpatterns = [
     re_path('admin/', admin.site.urls),
