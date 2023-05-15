@@ -32,7 +32,7 @@ class LivreSerializer(ModelSerializer):
 class ConsultesSerializer(ModelSerializer):
     class Meta:
         model = Consultes
-        fields=['date','livred']
+        fields=['date','livred','utilisateur']
 
 class ThesesSerializer(ModelSerializer):
     class Meta:
