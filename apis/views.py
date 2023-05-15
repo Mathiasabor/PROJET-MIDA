@@ -12,7 +12,7 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.viewsets import ReadOnlyModelViewSet
 from django.contrib.auth import get_user_model
 from rest_framework import status
-
+from django.contrib.auth.models import User
 from .serializers import LivreSerializer
 from .serializers import ThesesSerializer
 from .serializers import ConsultesSerializer
