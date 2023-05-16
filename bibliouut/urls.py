@@ -22,6 +22,7 @@ from rest_framework import routers
 from apis.views import LivreViewset
 from apis.views import CategoriesViewset
 from apis.views import ConsultesViewset
+from apis.views import ConsultedViewset
 from apis.views import ThesesViewset
 from apis.views import TelechargeViewset
 from apis.views import UserViewset
@@ -34,6 +35,7 @@ router = routers.SimpleRouter()
 router.register('categories',CategoriesViewset, basename ='categories')
 router.register('livres',LivreViewset, basename ='categories')
 router.register('consultes',ConsultesViewset, basename ='consultes')
+router.register(r'consulted',ConsultedViewset, basename='consultes-utilisateur')
 router.register('theses',ThesesViewset, basename ='theses')
 router.register('telecharges',TelechargeViewset, basename ='telecharges')
 router.register('users',UserViewset, basename ='users')
