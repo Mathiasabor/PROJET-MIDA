@@ -39,6 +39,9 @@ class Theses(models.Model):
 class Telecharge(models.Model):
     dates = models.DateField()
     thesed = models.ForeignKey(Theses, on_delete=models.CASCADE)
+    utilisateur = models.ForeignKey(User, on_delete=models.CASCADE,  blank=True, null=True)
+
+
 
     def __str__(self):
         return str(self.dates)

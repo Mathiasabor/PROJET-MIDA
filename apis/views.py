@@ -61,6 +61,13 @@ class TelechargeViewset(ModelViewSet):
     permission_classes = [IsAuthenticated]
     def get_queryset(self):
         return Telecharge.objects.all()
+    
+class TelechargedViewset(ModelViewSet):#nouveau element
+    serializer_class = TelechargeSerializer
+    permission_classes = [IsAuthenticated]
+    def get_queryset(self):
+        user = self.request.user
+        return Theses.objects.filter(utilisateur=user)
 
 class UserViewset(ModelViewSet):
     serializer_class = UserSerializer

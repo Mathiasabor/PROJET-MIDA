@@ -42,4 +42,4 @@ class ThesesSerializer(ModelSerializer):
 class TelechargeSerializer(ModelSerializer):
     class Meta:
         model =Telecharge
-        fields =['dates','thesed']
+        fields =['dates','thesed','utilisateur']
