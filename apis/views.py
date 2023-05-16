@@ -42,6 +42,13 @@ class ConsultesViewset(ModelViewSet):
     permission_classes = [IsAuthenticated]
     def get_queryset(self):
         return Consultes.objects.all()
+    
+class ConsultedViewset(ModelViewSet):
+    serializer_class = ConsultesSerializer
+    permission_classes = [IsAuthenticated]
+    def get_queryset(self):
+        user = self.request.user
+        return Consultes.objects.filter(utilisateur=user) 
 
 class ThesesViewset(ModelViewSet):
     serializer_class = ThesesSerializer
