@@ -22,7 +22,7 @@ class CategoriesSerializer(ModelSerializer):
 
 
 class LivreSerializer(ModelSerializer):
-    ccategoried = CategoriesSerializer()
+    categoried = CategoriesSerializer()
     class Meta:
         model = Livre
         fields=['id','isbn','description','linodate','editions','exemplaire','categoried']
